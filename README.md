@@ -1,4 +1,4 @@
-# Documentação para API Criadora de código de barras.
+# Documentação // Como usar
 
 ### Visão Geral
 
