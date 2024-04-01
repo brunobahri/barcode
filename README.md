@@ -1,13 +1,17 @@
-Documentação para API Criadora de código de barras. 
-Visão Geral
+# Documentação para API Criadora de código de barras.
+
+### Visão Geral
+
 A API Criadora de de código de barras permite a criação de tags de códigos de barras para produtos. A API é projetada para receber um código de produto e retornar o caminho para a imagem da tag de código de barras gerada.
 
-Pré-requisitos
+### Pré-requisitos
 Para executar esta API localmente, você precisará ter:
 
 Python 3.6 ou superior
 pip (gerenciador de pacotes Python)
-Instalação
+
+### Instalação
+
 Clone o repositório do GitHub:
 
 git clone https://github.com/brunobahri/barcode.git
@@ -21,7 +25,7 @@ Inicie o servidor localmente:
 python run.py
 
 
-Tratamento de Erros
+### Tratamento de Erros
 Os erros são retornados como objetos JSON no formato a seguir:
 ```
 {
@@ -38,7 +42,7 @@ A API utiliza os seguintes códigos de erro:
 422 Unprocessable Entity: Validação da entrada falhou.
 500 Internal Server Error: Ocorreu um erro no servidor.
 
-Endpoints
+### Endpoints
 
 POST /create_tag
 
@@ -56,7 +60,7 @@ Corpo:
   "product_code": "string"
 }
 ```
-Parâmetros:
+### Parâmetros:
 
 product_code (string, obrigatório): O código do produto para gerar a tag.
 Resposta
@@ -77,13 +81,13 @@ A resposta inclui o tipo de dado retornado, a contagem de itens e o caminho para
 
 Corpo (em erro): Consulte a seção Tratamento de Erros acima.
 
-Exemplo de Requisição
+### Exemplo de Requisição
 ```
 curl -X POST http://localhost:5000/create_tag \
 -H "Content-Type: application/json" \
 -d '{"product_code": "1234567890"}'
 ```
-Exemplo de Resposta
+### Exemplo de Resposta
 ```
 {
   "data": {
