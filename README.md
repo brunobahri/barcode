@@ -1,4 +1,4 @@
-# Documentação // Como usar
+# Barcode Generator
 
 ### Visão Geral
 
